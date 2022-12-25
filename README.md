@@ -1,4 +1,4 @@
-# Gulp + WebPack + Babel
+# Интернет магазин (Gulp + WebPack + Babel)
 
 ## Что делает Gulp?
 
