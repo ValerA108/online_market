@@ -1,13 +1,18 @@
 // =====================================================================================================================
-.header {
-  width: 100%;
-  // .header__container
-  &__container {
-    height: rem($headerHeight);
-    display: flex;
-    align-items: center;
-  }
+// .header {
+//   width: 100%;
+//   // .header__container
+//   &__container {
+//     height: rem($headerHeight);
+//     display: flex;
+//     align-items: center;
+//   }
+// }
+
+.menu__list-item {
+  font-size: 26px;
 }
+
 // =====================================================================================================================
 
 // Burger
