@@ -4,7 +4,7 @@ $maxWidthContainer: 1200; // ширина контейнера с учетом p
 $containerWidth: 1200; // ширина контейнера из макета
 
 $mainOffset: 15; // отступы безопасности для контейнера
-$mainFont: ""; // указать здесь основное семейство шрифта
+$mainFont: " "; // указать здесь основное семейство шрифта
 
 $headerHeight: 100;
 $footerHeight: 100;
@@ -13,7 +13,8 @@ $mainColor: #8d8d8d;
 $whiteColor: #fff;
 $blackColor: #131313;
 $grayColor: #6f6f6f;
-$redColor: #ff4040;
+$redColor: #fe3e57;
+$titleColor: #29282d;
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
@@ -31,3 +32,33 @@ $lightBoxShadow: 0 0 2px 0 rgba(#000, 10%), 0 0 4px 0 rgba(#000, 10%),
 
 $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
   0 0 15px 0 rgba(#000, 10%);
+
+%quicksand-400 {
+  font-family: "Quicksand-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%quicksand-500 {
+  font-family: "Quicksand-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%roboto-400 {
+  font-family: "Roboto-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%roboto-700 {
+  font-family: "Roboto-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%sevillana-400 {
+  font-family: "Sevillana-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%rubikBubbles-400 {
+  font-family: "RubikBubbles-Regular", sans-serif;
+  font-weight: 400;
+}

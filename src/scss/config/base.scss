@@ -1,5 +1,6 @@
 body {
   color: $mainColor;
+  @extend %quicksand-500;
   &.lock {
     overflow: hidden;
   }
@@ -11,6 +12,10 @@ body {
   padding: 0 15px;
 }
 
+.text-font {
+  background-color: pink;
+  @extend %sevillana-400;
+}
 // .wrapper {
 //   display: flex;
 //   flex-direction: column;
