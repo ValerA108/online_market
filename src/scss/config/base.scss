@@ -1,4 +1,6 @@
 body {
+  font-size: 16px;
+  line-height: 26px;
   color: $mainColor;
   @extend %quicksand-500;
   &.lock {
@@ -12,10 +14,6 @@ body {
   padding: 0 15px;
 }
 
-.text-font {
-  background-color: pink;
-  @extend %sevillana-400;
-}
 // .wrapper {
 //   display: flex;
 //   flex-direction: column;
