@@ -1,35 +1,46 @@
 body {
+  font-size: 16px;
+  line-height: 26px;
+  color: $mainColor;
+  @extend %quicksand-500;
   &.lock {
     overflow: hidden;
   }
 }
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  overflow: hidden;
-}
-.page {
-  position: relative;
-  flex: 1 1 auto;
 
-  [data-observ] {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: rem(2);
-    background: transparent;
-    pointer-events: none;
-    background-color: blueviolet;
-  }
-
-  &_start {
-    padding-top: rem($headerHeight);
-  }
-}
-[class*="__container"] {
-  max-width: rem($containerWidth + $mainOffset * 2);
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 rem($mainOffset);
+  padding: 0 15px;
 }
+
+// .wrapper {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100%;
+//   overflow: hidden;
+// }
+// .page {
+//   position: relative;
+//   flex: 1 1 auto;
+
+//   [data-observ] {
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: rem(2);
+//     background: transparent;
+//     pointer-events: none;
+//     background-color: blueviolet;
+//   }
+
+//   &_start {
+//     padding-top: rem($headerHeight);
+//   }
+// }
+// [class*="__container"] {
+//   max-width: rem($containerWidth + $mainOffset * 2);
+//   margin: 0 auto;
+//   padding: 0 rem($mainOffset);
+// }
