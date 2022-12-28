@@ -15,6 +15,7 @@ $blackColor: #131313;
 $grayColor: #6f6f6f;
 $redColor: #fe3e57;
 $titleColor: #29282d;
+$bgCol: #f6f6f6;
 
 $firstAccentColor: $blackColor;
 $secondAccentColor: $redColor;
@@ -46,6 +47,11 @@ $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
 %roboto-400 {
   font-family: "Roboto-Regular", sans-serif;
   font-weight: 400;
+}
+
+%roboto-500 {
+  font-family: "Roboto-Medium", sans-serif;
+  font-weight: 500;
 }
 
 %roboto-700 {

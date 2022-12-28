@@ -38,6 +38,16 @@
 }
 
 @font-face {
+  font-family: "Roboto-Medium";
+  font-display: swap;
+  src: local("Roboto-Medium");
+  src: url("../fonts/Roboto-Medium.woff2") format("woff2"),
+    url("../fonts/Roboto-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Roboto-Bold";
   font-display: swap;
   src: local("Roboto-Bold");
