@@ -1,0 +1,130 @@
+.slider {
+  $dots: 4;
+  $dotSize: 1;
+  $dotMargin: 1;
+
+  $duration: 1.2s;
+  $timingEase: cubic-bezier(0.51, 0.92, 0.24, 1);
+  $timingBounce: cubic-bezier(0.51, 0.92, 0.24, 1.15);
+
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+
+  &__slides {
+    position: relative;
+    width: $dots * 100%;
+    height: 100%;
+    transition: transform $duration $timingEase;
+    will-change: transform;
+  }
+
+  @for $i from 0 to $dots {
+    $slide: 100% / $dots;
+    $left: $slide * $i;
+
+    &[data-pos="#{ $i }"] &__slides {
+      transform: translateX(-$left);
+    }
+  }
+
+  &__slide {
+    float: left;
+    width: 100% / $dots;
+    height: 100%;
+  }
+
+  &__dots {
+    display: flex;
+    position: absolute;
+    bottom: 1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__dot {
+    display: block;
+    margin: 0 #{$dotMargin}em;
+    width: #{$dotSize}em;
+    height: #{$dotSize}em;
+    background-color: $mainColor;
+    border-radius: 100px;
+  }
+
+  &__indicator {
+    @extend .slider__dot;
+
+    position: absolute;
+    background-color: transparent;
+    // width: auto;
+    width: 26px;
+    height: 26px;
+    border: 2px solid $redColor;
+    transform: translate(-20%, -20%);
+
+    &--left {
+      transition: left $duration $timingBounce,
+        right $duration $duration/3 $timingBounce;
+    }
+
+    &--right {
+      transition: left $duration $duration/3 $timingBounce,
+        right $duration $timingBounce;
+    }
+  }
+
+  @for $i from 0 to $dots {
+    $dot: $dotSize + $dotMargin * 2;
+    $left: $dot * $i;
+    $right: $dot * ($dots - $i) - $dot;
+
+    &[data-pos="#{ $i }"] &__indicator {
+      left: #{$left}em;
+      right: #{$right}em;
+    }
+  }
+}
+
+.slider {
+  max-width: 1920px;
+  max-height: 700px;
+}
+
+.top-slider {
+  min-width: 100vh;
+  background-image: url(../images/top-slider-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+  background-color: $bgCol;
+  padding-top: 65px;
+  &__container {
+    max-width: 1560px;
+  }
+  &__content {
+    padding-left: 175px;
+    padding-top: 125px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title {
+    max-width: 670px;
+    font-size: 58px;
+    line-height: 68px;
+    color: $titleColor;
+    @extend %roboto-700;
+    margin-bottom: 35px;
+  }
+  &__text {
+    max-width: 470px;
+    margin-bottom: 55px;
+  }
+  &__link {
+    @extend %btn;
+    padding: 12px 26px;
+    border: none;
+  }
+}

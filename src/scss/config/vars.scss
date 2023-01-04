@@ -68,3 +68,12 @@ $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
   font-family: "RubikBubbles-Regular", sans-serif;
   font-weight: 400;
 }
+
+%btn {
+  background-color: $redColor;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 12px 26px;
+  @extend %roboto-400;
+  box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+}
