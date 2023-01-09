@@ -27,17 +27,17 @@
   }
   &__list-link {
     color: $titleColor;
-    padding-bottom: 1px;
+    padding: 0 2px 1px;
     transition: all 0.3s;
-    @extend %quicksand-400;
+    @extend %roboto-400;
     &:hover {
       color: $redColor;
       border-bottom: 1px solid $redColor;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
   &__list-link--active {
-    @extend %quicksand-500;
+    @extend %roboto-700;
     color: $redColor;
     border-bottom: 1px solid $redColor;
   }
