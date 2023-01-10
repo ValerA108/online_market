@@ -1,0 +1,26 @@
+.categories-info {
+  padding: 120px 0;
+  background-image: url("../images/decor/categories-left-bg.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  &__inner {
+    background-image: url("../images/decor/categories-right-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    padding: 60px 30px;
+    box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+  }
+  &__item-title {
+    margin: 35px 0 10px;
+    color: $titleColor;
+    font-size: 22px;
+    @extend %roboto-400;
+  }
+}

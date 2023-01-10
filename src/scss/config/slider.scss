@@ -1,14 +1,9 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
 .top-slider,
 .slider,
-.slider .imgs {
+.slider .img {
+  position: relative;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   max-height: 100%;
   position: relative;
 }
@@ -136,19 +131,17 @@ body {
 
 .slider {
   max-width: 1920px;
-  max-height: 700px;
+  min-height: 700px;
 }
 
 .top-slider {
   min-width: 100vh;
+  min-height: 100%;
   background-image: url(../images/top-slider-bg.png);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
   background-color: $bgCol;
-  &__container {
-    // max-width: 1560px;
-  }
   &__content {
     padding-left: 175px;
     padding-top: 125px;
@@ -156,6 +149,7 @@ body {
   &__item {
     display: flex;
     justify-content: start;
+    min-height: 100%;
   }
   &__title {
     max-width: 670px;
