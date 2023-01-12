@@ -287,3 +287,28 @@ for (let i = 0; i < sliders.length; ++i) {
   swipedetect(el);
 }
 var el = document.querySelector(".top-slider");
+
+// video-popup
+
+const videoBtn = document.querySelector(".video-fashion__play");
+const playVideo = document.querySelector(".video-fashion__play");
+const closeVideo = document.querySelector(".close");
+const clip = document.querySelector(".clip");
+const clipStop = document.querySelector("iframe");
+const body = document.querySelector("body");
+
+playVideo.onclick = function () {
+  videoBtn.classList.add("active");
+  clip.classList.add("active");
+  body.classList.add("lock");
+
+  clipStop.setAttribute("src", "https://www.youtube.com/embed/79KAKX1nnwU");
+
+  clip.addEventListener("click", (event) => {
+    clip.classList.remove("active");
+    body.classList.remove("lock");
+
+    const clipStop = document.querySelector("iframe");
+    clipStop.setAttribute("src", " ");
+  });
+};

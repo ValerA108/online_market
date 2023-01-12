@@ -45,6 +45,10 @@ a {
   max-width: 570px;
   margin: 0 auto 55px;
 }
+
+body.lock {
+  overflow: hidden;
+}
 // .wrapper {
 //   display: flex;
 //   flex-direction: column;
