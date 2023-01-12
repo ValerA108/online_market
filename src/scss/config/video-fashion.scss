@@ -1,0 +1,76 @@
+.video-fashion {
+  background-color: $bgCol;
+  background-image: url("../images/decor/video-pattern-bg.svg");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 125px 0;
+  &__inner {
+    display: flex;
+  }
+  &__popup {
+    margin-right: 55px;
+    max-width: 530px;
+    width: 100%;
+    height: 480px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__play {
+    cursor: pointer;
+  }
+  &__content {
+    max-width: 570px;
+  }
+  &__subtitle {
+    padding-top: 75px;
+    font-size: 22px;
+    color: $redColor;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+  &__title {
+    text-align: left;
+  }
+  &__text {
+    margin-bottom: 55px;
+  }
+  &__link {
+    @extend %btn;
+  }
+}
+
+.clip {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  background: rgba(245, 171, 171, 0.8);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.clip.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  cursor: pointer;
+  filter: invert(1);
+  max-width: 32px;
+  max-height: 32px;
+}
