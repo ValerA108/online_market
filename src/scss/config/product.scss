@@ -1,0 +1,98 @@
+.product {
+  padding: 105px 0 120px;
+  text-align: center;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 30px;
+  }
+  &__link {
+    text-transform: uppercase;
+    color: $titleColor;
+    display: inline-block;
+    border: 1px solid $redColor;
+    padding: 14px 27px;
+    line-height: 1.625;
+    margin-top: 55px;
+  }
+}
+
+.product-item {
+  max-width: 370px;
+  &__img-box {
+    position: relative;
+    height: 370px;
+    overflow: hidden;
+    margin-bottom: 25px;
+  }
+  &__link-box {
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    display: inline-block;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateY(300%);
+    transition: all 0.3s;
+  }
+  &__link--line::before,
+  &__link--line::after {
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    width: 1px;
+    height: 30px;
+    background-color: #ececec;
+    top: 10px;
+  }
+  &__link--line::before {
+    left: 70px;
+  }
+  &__link--line::after {
+    right: 70px;
+  }
+  &__link {
+    display: inherit;
+    path {
+      transition: all 0.3s;
+    }
+  }
+  &__link:hover {
+    path {
+      fill: $redColor;
+    }
+  }
+  &__images {
+    object-fit: cover;
+  }
+  &:hover {
+    .product-item__link-box {
+      transform: translateY(0);
+    }
+  }
+  &__title {
+    color: $titleColor;
+    padding: 15px 0 20px;
+  }
+  &__price {
+    display: flex;
+    justify-content: center;
+    @extend %roboto-400;
+  }
+  &__new-price {
+    padding: 0 12px;
+    color: $titleColor;
+  }
+  &__old-price {
+    padding: 0 12px;
+    text-decoration: line-through;
+  }
+}
