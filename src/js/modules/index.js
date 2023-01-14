@@ -312,3 +312,10 @@ playVideo.onclick = function () {
     clipStop.setAttribute("src", " ");
   });
 };
+
+//rateyo
+$(function () {
+  $(".star").rateYo({
+    rating: 3.6,
+  });
+});

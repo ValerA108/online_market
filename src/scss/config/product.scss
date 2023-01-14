@@ -95,4 +95,14 @@
     padding: 0 12px;
     text-decoration: line-through;
   }
+  &--sale {
+    .product-item__img-box::before {
+      content: "SALE";
+      @extend %btn;
+      position: absolute;
+      top: 25px;
+      left: 25px;
+      line-height: 1;
+    }
+  }
 }
