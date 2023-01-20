@@ -66,6 +66,7 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "jquery": "^3.6.3",
     "rateyo": "^2.3.2",
     "sass": "^1.45.1",
     "swiper": "^7.3.4",
@@ -73,5 +74,8 @@
     "webp-converter": "*2.2.3",
     "webpack": "^5.65.0",
     "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "@rateyo/jquery": "^3.0.0-alpha.2"
   }
 }

@@ -1,24 +1,24 @@
-import * as pathNode from 'path'
+import * as pathNode from "path";
 
-const srcFolder = 'src'
-const builFolder = 'dist'
+const srcFolder = "src";
+const builFolder = "dist";
 
 const path = {
   src: pathNode.resolve(srcFolder),
   build: pathNode.resolve(builFolder),
-}
+};
 
 export const webpackConfig = (isMode) => ({
-  entry: ['@babel/polyfill', `${path.src}/js/app.js`],
-  mode: isMode ? 'development' : 'production',
+  entry: ["@babel/polyfill", `${path.src}/js/app.js`],
+  mode: isMode ? "development" : "production",
   cache: {
-    type: 'filesystem', // По умолчанию 'memory'
+    type: "filesystem", // По умолчанию 'memory'
     cacheDirectory: `${path.src}/.temporary_cache`,
   },
   output: {
     path: `${path.build}/js`,
-    filename: 'app.min.js',
-    publicPath: '/',
+    filename: "app.min.js",
+    publicPath: "/",
   },
   module: {
     rules: [
@@ -26,9 +26,9 @@ export const webpackConfig = (isMode) => ({
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
-            presets: ['@babel/preset-env'],
+            presets: ["@babel/preset-env"],
           },
         },
         resolve: {
@@ -37,4 +37,4 @@ export const webpackConfig = (isMode) => ({
       },
     ],
   },
-})
+});

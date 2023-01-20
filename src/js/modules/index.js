@@ -313,9 +313,16 @@ playVideo.onclick = function () {
   });
 };
 
-//rateyo
-$(function () {
-  $(".star").rateYo({
-    rating: 3.6,
-  });
-});
+// star-rating
+
+const ratingItems = document.querySelectorAll(".star__rating-item");
+const ratingItemsArr = Array.prototype.slice.call(ratingItems);
+
+ratingItemsArr.forEach((item) =>
+  item.addEventListener("click", () => {
+    const { itemValue } = item.dataset;
+    item.parentNode.dataset.totalValue = itemValue;
+
+    // request itemValue - это значение отправляем на backend;
+  })
+);

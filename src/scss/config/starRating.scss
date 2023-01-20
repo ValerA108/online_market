@@ -1,0 +1,22 @@
+.star__rating {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  &-item {
+    color: $mainColor;
+    font-size: 24px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  &-item:hover,
+  &-item:hover ~ &-item {
+    color: $redColor;
+  }
+}
+
+.star__rating[data-total-value="1"] .star__rating-item:nth-child(n + 5),
+.star__rating[data-total-value="2"] .star__rating-item:nth-child(n + 4),
+.star__rating[data-total-value="3"] .star__rating-item:nth-child(n + 3),
+.star__rating[data-total-value="4"] .star__rating-item:nth-child(n + 2),
+.star__rating[data-total-value="5"] .star__rating-item:nth-child(n + 1) {
+  color: $redColor;
+}
