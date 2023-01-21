@@ -375,4 +375,3 @@ const deadline = document
 
 initializeClock("promo__clock", deadline);
 
-console.log(deadline);
