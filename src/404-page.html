@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Market' })
+  <body>
+    <header class="header header--404-page">
+      <div class="container">
+        <div class="header__inner">
+          <a class="logo" href="">
+            <img class="logo__img" src="../images/logo.png" alt="logo" />
+          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link menu__list-link--active" href="#"
+                  >HOME</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">SHOP</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">PAGE</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">BLOG</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">CONTACT</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a href="" class="user-nav__link">
+              <img
+                class="user-nav__link-img"
+                src="./images/icons/user.svg"
+                alt="icon"
+              /> </a
+            ><a href="" class="user-nav__link"
+              ><img
+                class="user-nav__link-img"
+                src="./images/icons/search.svg"
+                alt="icon" /></a
+            ><a href="" class="user-nav__link">
+              <img
+                class="user-nav__link-img"
+                src="./images/icons/heart.svg"
+                alt="icon"
+              />
+              <span class="user-nav__num">3</span></a
+            ><a href="" class="user-nav__link">
+              <img
+                class="user-nav__link-img"
+                src="./images/icons/cart.svg"
+                alt="icon"
+              /><span class="user-nav__num">7</span></a
+            >
+          </div>
+        </div>
+        <!-- @@include('./iconMenu.html', {}) -->
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="page-404">
+        <div class="container">
+          <div class="page-404__inner">
+            <div class="page-404__content">
+              <h2 class="page-404__title">OPPS! Page Not Found!!</h2>
+              <p class="page-404__text">
+                We,re sorry but we can’t seem to find the pages you request.
+                This might be because you have typed the web address not find
+                incorrectly.
+              </p>
+              <a href="#" class="page-404__link"> BACK TO HOME </a>
+            </div>
+            <img
+              src="./images/404.png"
+              alt="404 images"
+              class="page-404__img"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {}) @@include('html/script.html', {})
+  </body>
+</html>
