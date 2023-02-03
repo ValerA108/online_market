@@ -1,4 +1,20 @@
-import { isWebp, headerFixed } from "./modules";
+import "./libs/jQuery_3.6.3";
+import { rSlider } from "ion-rangeslider";
+import "./libs/jquery.formstyler.min";
+
+import {
+  isWebp,
+  isWork,
+  clockTimer,
+  rSlideR,
+  videoPopup,
+  headerFixed,
+  starRating,
+  topSlider,
+  formStyler,
+  switchBtnFilter,
+} from "./modules";
+
 /* Раскомментировать для использования */
 // import { MousePRLX } from './libs/parallaxMouse'
 
@@ -16,3 +32,11 @@ isWebp();
 // Фиксированный header ====================================================================================================================================================
 // headerFixed()
 // ====================================================================================================================================================
+
+topSlider();
+starRating();
+videoPopup();
+clockTimer();
+rSlideR();
+formStyler();
+// switchBtnFilter();
