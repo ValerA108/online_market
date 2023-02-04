@@ -224,6 +224,15 @@
 
 .shop-content {
   width: 100%;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #ececec;
+    .product-item {
+      margin-bottom: 40px;
+    }
+  }
   &__filter {
     border: 1px solid #ececec;
     padding: 20px 25px 20px 30px;
@@ -237,6 +246,7 @@
     align-items: center;
   }
   &__filter-btn {
+    outline: none;
     padding: 0;
     border: none;
     background-color: transparent;
