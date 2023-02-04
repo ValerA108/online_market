@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Market' })
+  <body>
+    @@include('html/header.html', {})
+    <main class="main">
+      <section class="top">
+        <div
+          class="top-container"
+          style="background-image: url('./images/top-bg.jpg')"
+        >
+          <div class="container">
+            <h2 class="top__title title">shop page</h2>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link"> Home </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link"> Shop page </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="shop">
+        <div class="container">
+          <div class="shop__inner">
+            <div class="shop__filters filter">
+              <div class="filter-search filter__item">
+                <h3 class="filter__title">Search</h3>
+                <form class="filter-search__form" action="#">
+                  <input
+                    class="filter-search__input"
+                    type="text"
+                    placeholder="Search your keyword...."
+                  />
+                  <button class="filter-search__btn" type="submit">
+                    <img
+                      src="./images/icons/search-white.svg"
+                      alt="search image"
+                    />
+                  </button>
+                </form>
+              </div>
+              <!---- Price filter ---->
+              <div class="filter__item filter-price">
+                <h3 class="filter__title">Price filter</h3>
+                <form class="filter-price__form" action="#">
+                  <input
+                    class="filter-price__input"
+                    type="text"
+                    data-min="0"
+                    data-max="999"
+                    data-from="200"
+                    data-to="800"
+                  />
+                  <label class="filter-price__label">
+                    <span
+                      >Price: <span class="filter-price__from"></span> -
+                      <span class="filter-price__to"></span>
+                    </span>
+                    <button class="filter-price__btn" type="submit">
+                      Filter
+                    </button>
+                  </label>
+                </form>
+              </div>
+              <!-- Color Filter -->
+              <div class="filter__item filter-color">
+                <h3 class="filter__title">Color Filter</h3>
+                <form class="filter-color__form" action="#">
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Blue (15)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--blue"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Red (09)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--red"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Green (28)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--green"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Orange (11)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--orange"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Black (05)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--black"
+                      ></span>
+                    </div>
+                  </label>
+                  <label class="filter-color__label">
+                    <span class="filter-color__text">Purple (21)</span>
+                    <div class="filter-color__box">
+                      <input class="filter-color__input" type="checkbox" />
+                      <span
+                        class="filter-color__checkbox filter-color__checkbox--purple"
+                      ></span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <!-- Size Filter -->
+              <div class="filter__item filter-size">
+                <h3 class="filter__title">Size Filter</h3>
+                <form class="filter-size__form" action="#">
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">X-small</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Small</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Medium</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">Large</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">X-small</span>
+                  </label>
+                  <label class="filter-size__label">
+                    <input class="filter-size__input" type="checkbox" />
+                    <span class="filter-size__checkbox"></span>
+                    <span class="filter-size__text">XXL</span>
+                  </label>
+                </form>
+              </div>
+              <div class="filter__item filter-category">
+                <h3 class="filter__title">Category</h3>
+                <form class="filter-category__form" action="#">
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox" />
+                    <div class="filter-category__checkbox">
+                      <span>Woman</span>
+                      <span>48</span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox" />
+                    <div class="filter-category__checkbox">
+                      <span>Man</span>
+                      <span>30</span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input
+                      class="filter-category__input"
+                      type="checkbox"
+                      checked
+                    />
+                    <div class="filter-category__checkbox">
+                      <span>Sale Products</span>
+                      <span>92</span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox" />
+                    <div class="filter-category__checkbox">
+                      <span>Fashion</span>
+                      <span>121</span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox" />
+                    <div class="filter-category__checkbox">
+                      <span>Hot Dresses</span>
+                      <span>52</span>
+                    </div>
+                  </label>
+                  <label class="filter-category__label">
+                    <input class="filter-category__input" type="checkbox" />
+                    <div class="filter-category__checkbox">
+                      <span>Accessories</span>
+                      <span>88</span>
+                    </div>
+                  </label>
+                </form>
+              </div>
+              <div class="filter__item filter-popular">
+                <h3 class="filter__title">Popular Tags</h3>
+                <form class="filter-popular__form" action="#">
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox"> Sweetshirt </span>
+                  </label>
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox">
+                      Man Accessories
+                    </span>
+                  </label>
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox"> Fashion </span>
+                  </label>
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox"> Polo </span>
+                  </label>
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox"> T-Shit </span>
+                  </label>
+                  <label class="filter-popular__label">
+                    <input class="filter-popular__input" type="checkbox" />
+                    <span class="filter-popular__checkbox"> Jewellery </span>
+                  </label>
+                </form>
+              </div>
+            </div>
+            <div class="shop-content">
+              <div class="shop-content__filter">
+                <div class="shop-content__filter-buttons">
+                  <span>View</span>
+                  <button class="shop-content__filter-btn active">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="15px"
+                      height="15px"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        fill="rgb(141, 141, 141)"
+                        d="M0.0,3.749 L3.749,3.749 L3.749,0.0 L0.0,0.0 L0.0,3.749 ZM5.624,14.999 L9.374,14.999 L9.374,11.249 L5.624,11.249 L5.624,14.999 ZM0.0,14.999 L3.749,14.999 L3.749,11.249 L0.0,11.249 L0.0,14.999 ZM0.0,9.374 L3.749,9.374 L3.749,5.624 L0.0,5.624 L0.0,9.374 ZM5.624,9.374 L9.374,9.374 L9.374,5.624 L5.624,5.624 L5.624,9.374 ZM11.249,0.0 L11.249,3.749 L14.999,3.749 L14.999,0.0 L11.249,0.0 ZM5.624,3.749 L9.374,3.749 L9.374,0.0 L5.624,0.0 L5.624,3.749 ZM11.249,9.374 L14.999,9.374 L14.999,5.624 L11.249,5.624 L11.249,9.374 ZM11.249,14.999 L14.999,14.999 L14.999,11.249 L11.249,11.249 L11.249,14.999 Z"
+                      />
+                    </svg>
+                  </button>
+                  <button class="shop-content__filter-btn">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      width="20px"
+                      height="15px"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        fill="rgb(141, 141, 141)"
+                        d="M5.834,14.998 L5.834,10.826 L19.993,10.826 L19.993,14.998 L5.834,14.998 ZM5.834,5.413 L19.993,5.413 L19.993,9.585 L5.834,9.585 L5.834,5.413 ZM5.834,0.0 L19.993,0.0 L19.993,4.172 L5.834,4.172 L5.834,0.0 ZM0.6,10.826 L4.429,10.826 L4.429,14.998 L0.6,14.998 L0.6,10.826 ZM0.6,5.413 L4.429,5.413 L4.429,9.585 L0.6,9.585 L0.6,5.413 ZM0.6,0.0 L4.429,0.0 L4.429,4.172 L0.6,4.172 L0.6,0.0 Z"
+                      />
+                    </svg>
+                  </button>
+                </div>
+                <div class="shop-content__filter-selects">
+                  <form class="shop-content__filter-selects-form" action="#">
+                    <select class="shop-content__filter-sort select-style">
+                      <option value="">Sort By Default</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                    <select class="shop-content__filter-show select-style">
+                      <option value="">Show 9</option>
+                      <option value="">2</option>
+                      <option value="">3</option>
+                      <option value="">4</option>
+                    </select>
+                  </form>
+                </div>
+              </div>
+              <div class="shop-content__inner">
+                <div class="product-item">
+                  <div class="product-item__img-box">
+                    <img
+                      class="product-item__images"
+                      src="./images/product/1.jpg"
+                      alt="product image"
+                    />
+                    <div class="product-item__link-box">
+                      <a href="#" class="product-item__link">
+                        <svg width="19px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M18.708,18.219 L14.27,13.269 C15.231,11.812 15.891,9.981 15.891,8.75 C15.891,3.621 12.328,0.1 7.947,0.1 C3.568,0.1 0.5,3.621 0.5,8.75 C0.5,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.159,15.649 12.498,14.690 L17.216,19.680 C17.413,19.889 17.678,20.4 17.963,20.4 C18.231,20.4 18.485,19.899 18.680,19.709 C19.93,19.306 19.104,18.639 18.708,18.219 L18.708,18.219 ZM7.947,2.105 C11.184,2.105 13.818,4.784 13.818,8.75 C13.818,11.367 11.184,14.45 7.947,14.45 C4.711,14.45 2.77,11.367 2.77,8.75 C2.77,4.784 4.711,2.105 7.947,2.105 L7.947,2.105 Z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="product-item__link product-item__link--line"
+                      >
+                        <svg width="16px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M15.998,17.293 L14.854,4.395 C14.829,4.108 14.588,3.892 14.306,3.892 L11.952,3.892 C11.920,1.740 10.162,0.1 8.5,0.1 C5.847,0.1 4.90,1.740 4.57,3.892 L1.703,3.892 C1.417,3.892 1.180,4.108 1.155,4.395 L0.11,17.293 C0.11,17.310 0.7,17.326 0.7,17.343 C0.7,18.812 1.351,20.6 3.6,20.6 L13.3,20.6 C14.658,20.6 16.2,18.812 16.2,17.343 C16.2,17.326 16.2,17.310 15.998,17.293 L15.998,17.293 ZM8.5,1.106 C9.553,1.106 10.816,2.350 10.849,3.892 L5.160,3.892 C5.193,2.350 6.456,1.106 8.5,1.106 L8.5,1.106 ZM13.3,18.902 L3.6,18.902 C1.968,18.902 1.127,18.214 1.110,17.368 L2.205,5.0 L4.53,5.0 L4.53,6.677 C4.53,6.984 4.298,7.230 4.604,7.230 C4.911,7.230 5.156,6.984 5.156,6.677 L5.156,5.0 L10.849,5.0 L10.849,6.677 C10.849,6.984 11.94,7.230 11.401,7.230 C11.707,7.230 11.952,6.984 11.952,6.677 L11.952,5.0 L13.800,5.0 L14.899,17.368 C14.882,18.214 14.37,18.902 13.3,18.902 L13.3,18.902 Z"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#" class="product-item__link">
+                        <svg width="23px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M16.893,0.1 C14.469,0.1 12.934,1.423 12.73,2.618 C11.850,2.928 11.660,3.239 11.501,3.532 C11.341,3.239 11.151,2.928 10.928,2.618 C10.67,1.423 8.532,0.1 6.108,0.1 C4.384,0.1 2.810,0.696 1.675,1.963 C0.592,3.172 0.3,4.791 0.3,6.521 C0.3,8.405 0.743,10.156 2.348,12.34 C3.783,13.713 5.846,15.443 8.236,17.446 C9.126,18.193 10.47,18.965 11.27,19.809 L11.57,19.834 C11.184,19.944 11.342,19.998 11.501,19.998 C11.659,19.998 11.817,19.944 11.945,19.834 L11.974,19.809 C12.954,18.965 13.875,18.193 14.766,17.446 C17.155,15.443 19.219,13.713 20.653,12.34 C22.258,10.156 23.5,8.405 23.5,6.521 C23.5,4.791 22.409,3.172 21.326,1.963 C20.192,0.696 18.617,0.1 16.893,0.1 ZM13.891,16.437 C13.124,17.80 12.334,17.742 11.501,18.455 C10.668,17.742 9.878,17.80 9.110,16.437 C4.434,12.516 1.344,9.926 1.344,6.521 C1.344,5.114 1.821,3.806 2.686,2.840 C3.561,1.863 4.777,1.325 6.108,1.325 C7.956,1.325 9.151,2.444 9.828,3.385 C10.435,4.227 10.752,5.78 10.860,5.403 C10.950,5.677 11.209,5.861 11.501,5.861 C11.792,5.861 12.51,5.677 12.142,5.403 C12.250,5.78 12.566,4.227 13.173,3.385 C13.850,2.444 15.45,1.325 16.893,1.325 C18.225,1.325 19.440,1.863 20.315,2.840 C21.181,3.806 21.657,5.114 21.657,6.521 C21.657,9.926 18.568,12.516 13.891,16.437 Z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="star__rating" data-total-value="4">
+                    <div class="star__rating-item" data-item-value="5">★</div>
+                    <div class="star__rating-item" data-item-value="4">★</div>
+                    <div class="star__rating-item" data-item-value="3">★</div>
+                    <div class="star__rating-item" data-item-value="2">★</div>
+                    <div class="star__rating-item" data-item-value="1">★</div>
+                  </div>
+                  <h4 class="product-item__title">White Polo Men’s T-Shirt</h4>
+                  <div class="product-item__price">
+                    <div class="product-item__new-price">$34.00</div>
+                    <div class="product-item__old-price">$27.00</div>
+                  </div>
+                </div>
+                <div class="product-item product-item--sale">
+                  <div class="product-item__img-box">
+                    <img
+                      class="product-item__images"
+                      src="./images/product/2.jpg"
+                      alt="product image"
+                    />
+                    <div class="product-item__link-box">
+                      <a href="#" class="product-item__link">
+                        <svg width="19px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M18.708,18.219 L14.27,13.269 C15.231,11.812 15.891,9.981 15.891,8.75 C15.891,3.621 12.328,0.1 7.947,0.1 C3.568,0.1 0.5,3.621 0.5,8.75 C0.5,12.529 3.568,16.153 7.947,16.153 C9.591,16.153 11.159,15.649 12.498,14.690 L17.216,19.680 C17.413,19.889 17.678,20.4 17.963,20.4 C18.231,20.4 18.485,19.899 18.680,19.709 C19.93,19.306 19.104,18.639 18.708,18.219 L18.708,18.219 ZM7.947,2.105 C11.184,2.105 13.818,4.784 13.818,8.75 C13.818,11.367 11.184,14.45 7.947,14.45 C4.711,14.45 2.77,11.367 2.77,8.75 C2.77,4.784 4.711,2.105 7.947,2.105 L7.947,2.105 Z"
+                          />
+                        </svg>
+                      </a>
+                      <a
+                        href="#"
+                        class="product-item__link product-item__link--line"
+                      >
+                        <svg width="16px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M15.998,17.293 L14.854,4.395 C14.829,4.108 14.588,3.892 14.306,3.892 L11.952,3.892 C11.920,1.740 10.162,0.1 8.5,0.1 C5.847,0.1 4.90,1.740 4.57,3.892 L1.703,3.892 C1.417,3.892 1.180,4.108 1.155,4.395 L0.11,17.293 C0.11,17.310 0.7,17.326 0.7,17.343 C0.7,18.812 1.351,20.6 3.6,20.6 L13.3,20.6 C14.658,20.6 16.2,18.812 16.2,17.343 C16.2,17.326 16.2,17.310 15.998,17.293 L15.998,17.293 ZM8.5,1.106 C9.553,1.106 10.816,2.350 10.849,3.892 L5.160,3.892 C5.193,2.350 6.456,1.106 8.5,1.106 L8.5,1.106 ZM13.3,18.902 L3.6,18.902 C1.968,18.902 1.127,18.214 1.110,17.368 L2.205,5.0 L4.53,5.0 L4.53,6.677 C4.53,6.984 4.298,7.230 4.604,7.230 C4.911,7.230 5.156,6.984 5.156,6.677 L5.156,5.0 L10.849,5.0 L10.849,6.677 C10.849,6.984 11.94,7.230 11.401,7.230 C11.707,7.230 11.952,6.984 11.952,6.677 L11.952,5.0 L13.800,5.0 L14.899,17.368 C14.882,18.214 14.37,18.902 13.3,18.902 L13.3,18.902 Z"
+                          />
+                        </svg>
+                      </a>
+                      <a href="#" class="product-item__link">
+                        <svg width="23px" height="20px">
+                          <path
+                            fill-rule="evenodd"
+                            fill="rgb(41, 40, 45)"
+                            d="M16.893,0.1 C14.469,0.1 12.934,1.423 12.73,2.618 C11.850,2.928 11.660,3.239 11.501,3.532 C11.341,3.239 11.151,2.928 10.928,2.618 C10.67,1.423 8.532,0.1 6.108,0.1 C4.384,0.1 2.810,0.696 1.675,1.963 C0.592,3.172 0.3,4.791 0.3,6.521 C0.3,8.405 0.743,10.156 2.348,12.34 C3.783,13.713 5.846,15.443 8.236,17.446 C9.126,18.193 10.47,18.965 11.27,19.809 L11.57,19.834 C11.184,19.944 11.342,19.998 11.501,19.998 C11.659,19.998 11.817,19.944 11.945,19.834 L11.974,19.809 C12.954,18.965 13.875,18.193 14.766,17.446 C17.155,15.443 19.219,13.713 20.653,12.34 C22.258,10.156 23.5,8.405 23.5,6.521 C23.5,4.791 22.409,3.172 21.326,1.963 C20.192,0.696 18.617,0.1 16.893,0.1 ZM13.891,16.437 C13.124,17.80 12.334,17.742 11.501,18.455 C10.668,17.742 9.878,17.80 9.110,16.437 C4.434,12.516 1.344,9.926 1.344,6.521 C1.344,5.114 1.821,3.806 2.686,2.840 C3.561,1.863 4.777,1.325 6.108,1.325 C7.956,1.325 9.151,2.444 9.828,3.385 C10.435,4.227 10.752,5.78 10.860,5.403 C10.950,5.677 11.209,5.861 11.501,5.861 C11.792,5.861 12.51,5.677 12.142,5.403 C12.250,5.78 12.566,4.227 13.173,3.385 C13.850,2.444 15.45,1.325 16.893,1.325 C18.225,1.325 19.440,1.863 20.315,2.840 C21.181,3.806 21.657,5.114 21.657,6.521 C21.657,9.926 18.568,12.516 13.891,16.437 Z"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="star__rating" data-total-value="2">
+                    <div class="star__rating-item" data-item-value="5">★</div>
+                    <div class="star__rating-item" data-item-value="4">★</div>
+                    <div class="star__rating-item" data-item-value="3">★</div>
+                    <div class="star__rating-item" data-item-value="2">★</div>
+                    <div class="star__rating-item" data-item-value="1">★</div>
+                  </div>
+                  <h4 class="product-item__title">White Polo Men’s T-Shirt</h4>
+                  <div class="product-item__price">
+                    <div class="product-item__new-price">$34.00</div>
+                    <div class="product-item__old-price">$27.00</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {}) @@include('html/script.html', {})
+  </body>
+</html>

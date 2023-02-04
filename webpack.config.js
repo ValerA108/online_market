@@ -33,8 +33,13 @@ export const webpackConfig = (isMode) => ({
         },
         resolve: {
           fullySpecified: false,
+          // path: require.resolve("path-browserify"),
         },
       },
     ],
   },
 });
+
+// module.exports = {
+//   resolve: { path: require.resolve("path-browserify") },
+// };

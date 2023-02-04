@@ -66,7 +66,9 @@
     "gulp-webp-html-nosvg": "^1.0.1",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
+    "ion-rangeslider": "^2.3.1",
     "jquery": "^3.6.3",
+    "jquery-form-styler": "^2.0.2",
     "rateyo": "^2.3.2",
     "sass": "^1.45.1",
     "swiper": "^7.3.4",
@@ -76,6 +78,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "@rateyo/jquery": "^3.0.0-alpha.2"
+    "@rateyo/jquery": "^3.0.0-alpha.2",
+    "path-browserify": "^1.0.1"
   }
 }
