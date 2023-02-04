@@ -39,4 +39,4 @@ videoPopup();
 clockTimer();
 rSlideR();
 formStyler();
-// switchBtnFilter();
+switchBtnFilter();

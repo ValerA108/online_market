@@ -74,11 +74,14 @@
     "swiper": "^7.3.4",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "*2.2.3",
-    "webpack": "^5.65.0",
-    "webpack-stream": "^7.0.0"
+    "webpack": "latest",
+    "webpack-cli": "latest",
+    "webpack-stream": "latest"
   },
   "dependencies": {
     "@rateyo/jquery": "^3.0.0-alpha.2",
-    "path-browserify": "^1.0.1"
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "stream": "^0.0.2"
   }
 }

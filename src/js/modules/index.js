@@ -1,14 +1,15 @@
-import { active } from "browser-sync";
+// import { active } from "browser-sync";
 
 // FLS (Full Logging System) =================================================================================================================
-export function FLS(message) {
-  setTimeout(() => {
-    if (window.FLS) {
-      console.log(message);
-    }
-  }, 0);
-}
+// export function FLS(message) {
+//   setTimeout(() => {
+//     if (window.FLS) {
+//       console.log(message);
+//     }
+//   }, 0);
+// }
 
+// Проверка браузера на поддержку .webp изображений =================================================================================================================
 // Проверка браузера на поддержку .webp изображений =================================================================================================================
 export function isWebp() {
   // Проверка поддержки webp
@@ -28,18 +29,18 @@ export function isWebp() {
 }
 
 // Функция для фиксированной шапки при скролле =================================================================================================================
-export function headerFixed() {
-  const header = document.querySelector(".header");
-  const firstScreen = document.querySelector("[data-observ]");
+// export function headerFixed() {
+//   const header = document.querySelector(".header");
+//   const firstScreen = document.querySelector("[data-observ]");
 
-  const headerStickyObserver = new IntersectionObserver(([entry]) => {
-    header.classList.toggle("sticky", !entry.isIntersecting);
-  });
+//   const headerStickyObserver = new IntersectionObserver(([entry]) => {
+//     header.classList.toggle("sticky", !entry.isIntersecting);
+//   });
 
-  if (firstScreen) {
-    headerStickyObserver.observe(firstScreen);
-  }
-}
+//   if (firstScreen) {
+//     headerStickyObserver.observe(firstScreen);
+//   }
+// }
 
 ////////////////////////////////////
 
@@ -439,28 +440,48 @@ export function rSlideR() {
 
 // form styler
 
-// export function formStyler() {
-//   const wrapFormStyler = $(".select-style");
-//   if (wrapFormStyler) {
-//     wrapFormStyler.styler();
-//   }
-// }
+export function formStyler() {
+  const wrapFormStyler = $(".select-style");
+  if (wrapFormStyler) {
+    wrapFormStyler.styler();
+  }
+}
 
 ////////////////////////////////////////////////
 
 // shop-btn-filter
 
+export function switchBtnFilter() {
+  const wrapBtnSwitcher = $(".shop-content__filter-btn");
+  if (wrapBtnSwitcher) {
+    $(".shop-content__filter-btn").on("click", function () {
+      $(".shop-content__filter-btn").removeClass("active");
+      $(this).addClass("active");
+    });
+    $(".button-list").on("click", function () {
+      $(".product-item").addClass("list");
+    });
+    $(".button-grid").on("click", function () {
+      $(".product-item").removeClass("list");
+    });
+  }
+}
+
+////////////////////////////////////////////////
+
+// $(".shop-content__filter-btn").on("click", function () {
+//   $(".shop-content__filter-btn").removeClass("active");
+//   $(this).addClass("active");
+// });
+
 // export function switchBtnFilter() {
 //   const wrapBtnSwitcher = document.querySelector(".shop-content__filter-btn");
 //   if (wrapBtnSwitcher) {
 //     wrapBtnSwitcher.addEventListener("click", function () {
-//       alert("Working");
+//       wrapBtnSwitcher.classList.remove("active");
+//       wrapBtnSwitcher.classList.add("active");
 //     });
 //   }
 // }
 
 ////////////////////////////////////////////////
-
-// $(".shop-content__filter-btn").on("click", function () {
-//   $(".shop-content__filter-btn").toggleClass("active");
-// });

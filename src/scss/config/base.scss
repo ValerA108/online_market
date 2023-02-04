@@ -54,6 +54,49 @@ a {
 body.lock {
   overflow: hidden;
 }
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  .pagination__list {
+    display: flex;
+    padding: 0 35px;
+  }
+  .pagination__item {
+    padding: 0 15px;
+  }
+  &__link--active {
+    color: $redColor;
+  }
+  &__arrows {
+    text-transform: uppercase;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 10px;
+    }
+  }
+  &__prev {
+    padding-left: 15px;
+    &::before {
+      background-image: url("../../images/icons/arrow-left.svg");
+      left: 0;
+      top: 8px;
+    }
+  }
+  &__next {
+    padding-right: 15px;
+    &::before {
+      background-image: url("../../images/icons/arrow-right.svg");
+      right: 0;
+      top: 8px;
+    }
+  }
+}
+
 // .wrapper {
 //   display: flex;
 //   flex-direction: column;
