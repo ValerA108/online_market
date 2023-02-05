@@ -1,6 +1,7 @@
 import "./libs/jQuery_3.6.3";
 import { rSlider } from "ion-rangeslider";
 import "./libs/jquery.formstyler.min";
+import "./libs/slick";
 
 import {
   isWebp,
@@ -12,6 +13,7 @@ import {
   starRating,
   topSlider,
   formStyler,
+  slickSlider,
   switchBtnFilter,
 } from "./modules";
 
@@ -40,3 +42,4 @@ clockTimer();
 rSlideR();
 formStyler();
 switchBtnFilter();
+slickSlider();

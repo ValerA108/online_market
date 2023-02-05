@@ -442,8 +442,12 @@ export function rSlideR() {
 
 export function formStyler() {
   const wrapFormStyler = $(".select-style");
+  const numberProduct = $(".product-one__item-num");
   if (wrapFormStyler) {
     wrapFormStyler.styler();
+  }
+  if (numberProduct) {
+    numberProduct.styler();
   }
 }
 
@@ -485,3 +489,29 @@ export function switchBtnFilter() {
 // }
 
 ////////////////////////////////////////////////
+
+// $(".product-slide__thumb").slick({});
+
+export function slickSlider() {
+  const sSlider = $(".product-one__slide");
+  if (sSlider) {
+    $(".product-slide__thumb").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      vertical: true,
+      draggable: false,
+      // arrows: true,
+      // fade: true,
+      asNavFor: ".product-slide__big",
+      focusOnSelect: true,
+    });
+    $(".product-slide__big").slick({
+      // slidesToShow: 1,
+      // slidesToScroll: 1,
+      // arrows: false,
+      fade: true,
+      asNavFor: ".product-slide__thumb",
+      draggable: false,
+    });
+  }
+}

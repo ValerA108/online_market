@@ -71,6 +71,7 @@
     "jquery-form-styler": "^2.0.2",
     "rateyo": "^2.3.2",
     "sass": "^1.45.1",
+    "slick-carousel": "^1.8.1",
     "swiper": "^7.3.4",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "*2.2.3",
