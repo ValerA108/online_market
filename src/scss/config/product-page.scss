@@ -1,0 +1,155 @@
+.product-page {
+  padding: 120px 0 60px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-one {
+  &__inner {
+    display: flex;
+  }
+  &__slide {
+    width: 730px;
+    margin-right: 70px;
+  }
+  &__content {
+    width: 370px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    color: $titleColor;
+    font-size: 20px;
+  }
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  &__price {
+    font-size: 18px;
+    display: flex;
+  }
+  &__price-new {
+    color: $titleColor;
+    padding-right: 15px;
+  }
+  &__price-old {
+    text-decoration: line-through;
+  }
+  &__item-star {
+    display: flex;
+    span {
+      padding-left: 8px;
+      color: $titleColor;
+      font-size: 22px;
+    }
+  }
+  &__item-text {
+    margin-bottom: 40px;
+    span {
+      display: block;
+      color: $titleColor;
+      @extend %roboto-400;
+      font-size: 18px;
+    }
+  }
+  &__item-btn {
+    @extend %btn;
+    border: none;
+    cursor: pointer;
+  }
+}
+.product-slide {
+  display: flex;
+  &__thumb {
+    width: 140px;
+    margin-right: 30px;
+  }
+  &__thumb-item {
+    margin-bottom: 30px;
+    width: 140px;
+    height: 140px;
+    cursor: pointer;
+    img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+    }
+  }
+  &__big {
+    width: 560px;
+    img {
+      width: 560px;
+      height: 650px;
+      object-fit: cover;
+    }
+  }
+  &__big-item {
+  }
+}
+.product {
+  &__item-star {
+  }
+  &__item-text {
+  }
+  &__item-form {
+  }
+  &__item-info {
+  }
+  &__item-num {
+  }
+}
+.star {
+  &__rating {
+  }
+  &__rating-item {
+  }
+}
+.product-filter {
+  &__color {
+  }
+  &__color-title {
+  }
+  &__color-input {
+  }
+  &__color-checkbox {
+  }
+  &__size {
+  }
+  &__size-title {
+  }
+  &__size-input {
+  }
+  &__sixe-checkbox {
+  }
+}
+.product-info {
+  &__list {
+    margin-bottom: 30px;
+  }
+  &__item {
+    display: flex;
+  }
+  &__title {
+    min-width: 100px;
+    color: $titleColor;
+  }
+  &__text {
+  }
+  &__link {
+    path {
+      fill: $mainColor;
+    }
+    & + .product-info__link {
+      margin-left: 15px;
+    }
+    &:hover {
+      path {
+        fill: $redColor;
+      }
+    }
+  }
+}
+.product-tabs {
+}
+.product-reviews {
+}
