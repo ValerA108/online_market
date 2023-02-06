@@ -14,6 +14,7 @@ import {
   topSlider,
   formStyler,
   slickSlider,
+  productTabsSwitcher,
   switchBtnFilter,
 } from "./modules";
 
@@ -43,3 +44,4 @@ rSlideR();
 formStyler();
 switchBtnFilter();
 slickSlider();
+productTabsSwitcher();
