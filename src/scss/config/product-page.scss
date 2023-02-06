@@ -238,3 +238,42 @@
     }
   }
 }
+
+.product-tabs {
+  padding-top: 100px;
+  &__top {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #f0f0f0;
+    @extend %roboto-400;
+    font-size: 22px;
+  }
+  &__top-item {
+    margin-bottom: 10px;
+    display: inline-block;
+    & + .product-tabs__top-item {
+      margin-left: 55px;
+    }
+  }
+  .product-tabs__top-item.active {
+    color: $titleColor;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $redColor;
+    }
+  }
+  &__content {
+  }
+  &__content-item {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+}
