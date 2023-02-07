@@ -75,7 +75,19 @@ $hoverBoxShadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
   color: #fff;
   padding: 12px 26px;
   @extend %roboto-400;
+  cursor: pointer;
+  transition: all 0.3s;
   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+  &:hover {
+    transform: scale(1.03);
+    color: black;
+    border-radius: 5px;
+  }
+  &:active {
+    background: #e12841;
+    transform: scale(0.9);
+    border-radius: 5px;
+  }
 }
 
 %checkbox-hidden,
