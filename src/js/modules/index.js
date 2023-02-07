@@ -524,7 +524,7 @@ export function productTabsSwitcher() {
   const tabSection = document.querySelector(".product-tabs");
 
   const productTabs = document.querySelectorAll(".product-tabs__top-item");
-  const activeProductContent = document.querySelectorAll(
+  const productContent = document.querySelectorAll(
     ".product-tabs__content-item"
   );
 
@@ -540,7 +540,7 @@ export function productTabsSwitcher() {
           productTabs.forEach(function (item) {
             item.classList.remove("active");
           });
-          activeProductContent.forEach(function (item) {
+          productContent.forEach(function (item) {
             item.classList.remove("active");
           });
 
