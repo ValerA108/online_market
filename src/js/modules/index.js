@@ -554,3 +554,20 @@ export function productTabsSwitcher() {
 }
 
 ////////////////////////////////////////////////
+
+//slider in blog page
+
+export function slickSliderBlogPage() {
+  const sSliderBlog = $(".blog-page__slider");
+  if (sSliderBlog) {
+    $(".blog-page__slider").slick({
+      // slidesToShow: 4,
+      // slidesToScroll: 1,
+      // vertical: true,
+      // draggable: false,
+      // focusOnSelect: true,
+    });
+  }
+}
+
+////////////////////////////////////////////////
