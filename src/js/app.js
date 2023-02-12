@@ -15,6 +15,7 @@ import {
   formStyler,
   slickSlider,
   productTabsSwitcher,
+  slickSliderBlogPage,
   switchBtnFilter,
 } from "./modules";
 
@@ -45,3 +46,4 @@ formStyler();
 switchBtnFilter();
 slickSlider();
 productTabsSwitcher();
+slickSliderBlogPage();
