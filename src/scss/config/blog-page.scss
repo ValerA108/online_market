@@ -1,5 +1,37 @@
 .blog-page {
   padding: 120px 0 60px;
+  &__item--slider {
+    .blog-page__item-box {
+      margin-top: -8px;
+    }
+  }
+  &__slider {
+    .slick-next,
+    .slick-prev {
+      width: 40px;
+      height: 40px;
+      z-index: 5;
+      background-color: $redColor;
+      border-radius: 50%;
+      box-shadow: 0px 7px 20px 0px rgba(254, 168, 168, 0.3);
+      path {
+        fill: #fff;
+      }
+    }
+    .slick-next {
+      right: 40px;
+    }
+    .slick-prev {
+      left: 40px;
+    }
+  }
+  .slick-disabled {
+    background-color: #fff;
+    box-shadow: 0px 7px 20px 0px rgba(168, 62, 87, 0.3);
+    path {
+      fill: $redColor;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -48,6 +80,96 @@
     justify-content: start;
     &__author {
       margin-right: 30px;
+    }
+  }
+}
+.slick-next::before,
+.slick-prev::before {
+  content: none;
+}
+.person {
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  text-align: center;
+  padding: 40px 25px;
+  &__img {
+    display: inline-block;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    margin: 0 auto 35px;
+  }
+  &__name {
+    color: $titleColor;
+    font-size: 18px;
+    @extend %roboto-700;
+  }
+  &__position {
+    color: $redColor;
+    margin-bottom: 25px;
+  }
+  &__text {
+    margin-bottom: 25px;
+  }
+  &__social-link {
+    margin-right: 15px;
+    path {
+      fill: $mainColor;
+      transition: all 0.3s;
+    }
+    &:hover {
+      path {
+        fill: $redColor;
+      }
+    }
+  }
+}
+.latest-post {
+  padding: 35px 30px 40px;
+  border: 1px solid #ececec;
+  margin-bottom: 40px;
+  &__title {
+    color: $titleColor;
+    text-transform: uppercase;
+    font-size: 22px;
+    @extend %roboto-400;
+    margin-bottom: 35px;
+  }
+  &__item {
+    margin-bottom: 20px;
+    display: flex;
+    & + .latest-post__item {
+      border-top: 1px solid #ececec;
+      padding-top: 20px;
+    }
+  }
+  &__img-link {
+    display: block;
+    margin-right: 20px;
+    min-width: 80px;
+  }
+  &__img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+  }
+  &__title-link {
+    font-size: 18px;
+    @extend %roboto-400;
+    color: $titleColor;
+    line-height: 28px;
+  }
+  &__date {
+    padding-left: 26px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 5px;
+      background-image: url(../../images/icons/calendar.svg);
+      width: 16px;
+      height: 16px;
     }
   }
 }
