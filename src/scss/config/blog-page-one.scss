@@ -1,0 +1,110 @@
+.blog-one {
+  &__text {
+    border: 1px solid #ececec;
+    padding: 25px;
+    h4 {
+      color: $titleColor;
+      font-size: 22px;
+      @extend %roboto-700;
+      margin: 25px 0;
+    }
+    p {
+      margin: 25px 0;
+    }
+    blockquote {
+      background-color: $bgCol;
+      color: $titleColor;
+      font-size: 22px;
+      @extend %roboto-400;
+      border-left: 3px solid $redColor;
+      padding: 35px 75px 35px 35px;
+    }
+  }
+  &__left-img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+  &__info {
+    display: flex;
+    margin-bottom: 25px;
+  }
+  &__form-title {
+    text-transform: uppercase;
+    margin: 35px 0 25px;
+    color: $titleColor;
+    font-size: 24px;
+    @extend %roboto-700;
+  }
+  &__info-link {
+    margin-right: 30px;
+    padding-left: 28px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../../images/icons/calendar.svg);
+    }
+  }
+  &__info-link--comment::before {
+    background-image: url(../../images/icons/comment.svg);
+  }
+  &__info-link--author::before {
+    background-image: url(../../images/icons/user-red.svg);
+  }
+  .comments-title {
+    margin-bottom: 25px;
+    color: $titleColor;
+    font-size: 24px;
+    text-transform: uppercase;
+    @extend %roboto-700;
+  }
+  .comment-form {
+    border-bottom: none;
+  }
+  &__box {
+    margin: 25px 0 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__tags,
+  &__share {
+    span {
+      text-transform: uppercase;
+      color: $titleColor;
+      margin-right: 5px;
+      @extend %roboto-700;
+    }
+  }
+  &__share {
+    a {
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+    path {
+      fill: #727272;
+    }
+  }
+  &__author {
+    border-bottom: 1px solid #ececec;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    display: flex;
+  }
+  &__author-img {
+    width: 140px;
+    height: 140px;
+    margin-right: 30px;
+    object-fit: cover;
+  }
+  &__author-name {
+    margin-bottom: 24px;
+    font-size: 22px;
+    @extend %roboto-700;
+    color: $titleColor;
+  }
+}
