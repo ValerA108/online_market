@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Market' })
+  <body>
+    @@include('html/header.html', {})
+    <main class="main">
+      <section class="top">
+        <div
+          class="top-container"
+          style="background-image: url('./images/top-bg.jpg')"
+        >
+          <div class="container">
+            <h2 class="top__title title">CONTACT US</h2>
+            <div class="breadcrumbs">
+              <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link"> Home </a>
+                </li>
+                <li class="breadcrumbs__item">
+                  <a href="#" class="breadcrumbs__link"> Contact </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map">
+        <div class="container">
+          <div id="map"></div>
+        </div>
+      </section>
+      <section class="contact">
+        <div class="container">
+          <div class="contact__inner">
+            <div class="contact__info">
+              <h3 class="contact__info-title">
+                Feel Free Don`t Hesitate To Contact With Us
+              </h3>
+              <p class="contact__info-text">
+                Lorem ipsum dolor sit amet, consectetur adingn elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis
+                ipsum suspendisse ultrices gravida. Risus commodo maecnaacnrao
+                cumsan lacus vel facilisis.
+              </p>
+              <ul class="contact__info-list">
+                <li class="contact__info-item">
+                  <a class="contact__info-phone" href="tel:+01234567896"
+                    >+0-123-456-7896</a
+                  >
+                  <a class="contact__info-phone" href="tel:+01234567896"
+                    >+0-123-456-7896</a
+                  >
+                </li>
+                <li class="contact__info-item contact__info-item--location">
+                  Ranlon Market 789 Road,<br />
+                  Market Street, Newyork
+                </li>
+                <li class="contact__info-item contact__info-item--email">
+                  <a href="mailto:yourmailaddress@gmail.com"
+                    >yourmailaddress@gmail.com</a
+                  >
+                  <a href="mailto:companymail@gmail.com"
+                    >companymail@gmail.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <form class="contact__form" action="#">
+              <p class="contact__form-title">Contact Form</p>
+              <div class="contact__form-box">
+                <input
+                  class="contact__form-input"
+                  type="text"
+                  placeholder="Your Name"
+                />
+                <input
+                  class="contact__form-input"
+                  type="text"
+                  placeholder="Your E-mail Address"
+                />
+              </div>
+              <input
+                class="contact__form-input"
+                type="text"
+                placeholder="Subject"
+              />
+              <textarea
+                class="contact__form-textarea"
+                placeholder="Message here"
+              ></textarea>
+              <button class="contact__form-btn" type="submit">
+                SEND MESSAGE
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function initMap() {
+        const myLatLng = { lat: 53.8906361, lng: 27.572214 };
+
+        let map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 15,
+          center: myLatLng,
+          styles: [
+            {
+              featureType: "all",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+              ],
+            },
+            {
+              featureType: "administrative",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "administrative",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+                {
+                  color: "#a31645",
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "all",
+              stylers: [
+                {
+                  weight: "3.79",
+                },
+                {
+                  visibility: "on",
+                },
+                {
+                  color: "#ffecf0",
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "landscape",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+                {
+                  color: "#a31645",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "geometry",
+              stylers: [
+                {
+                  saturation: "0",
+                },
+                {
+                  lightness: "0",
+                },
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi",
+              elementType: "geometry.stroke",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+                {
+                  color: "#d89ca8",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              elementType: "geometry",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+                {
+                  saturation: "0",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              elementType: "labels",
+              stylers: [
+                {
+                  color: "#a31645",
+                },
+              ],
+            },
+            {
+              featureType: "poi.business",
+              elementType: "label.icon",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+                {
+                  lightness: "84",
+                },
+              ],
+            },
+            {
+              featureType: "road",
+              elementType: "all",
+              stylers: [
+                {
+                  saturation: -100,
+                },
+                {
+                  lightness: 45,
+                },
+              ],
+            },
+            {
+              featureType: "road.highway",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "simplified",
+                },
+              ],
+            },
+            {
+              featureType: "road.arterial",
+              elementType: "labels.icon",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "transit",
+              elementType: "all",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "all",
+              stylers: [
+                {
+                  color: "#d89ca8",
+                },
+                {
+                  visibility: "on",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "geometry.fill",
+              stylers: [
+                {
+                  visibility: "on",
+                },
+                {
+                  color: "#fedce3",
+                },
+              ],
+            },
+            {
+              featureType: "water",
+              elementType: "labels",
+              stylers: [
+                {
+                  visibility: "off",
+                },
+              ],
+            },
+          ],
+        });
+
+        let marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+        });
+      }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVY4Mx2Gch_ZKynmvlei0AHTUxNT-2T8c&callback=initMap"
+      async
+      defer
+    ></script>
+    @@include('html/footer.html', {}) @@include('html/script.html', {})
+
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVY4Mx2Gch_ZKynmvlei0AHTUxNT-2T8ccallback=gMapsContacts&v=weekly"
+      defer
+    ></script> -->
+    <!-- <script>
+      let map;
+
+      function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: -34.397, lng: 150.644 },
+          zoom: 8,
+        });
+      }
+    </script> -->
+  </body>
+</html>

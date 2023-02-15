@@ -1,0 +1,118 @@
+#map {
+  width: 100%;
+  height: 450px;
+}
+
+.map {
+  padding: 120px 0;
+}
+
+.contact {
+  margin-bottom: 120px;
+  &__inner {
+    display: flex;
+  }
+  &__info {
+    max-width: 370px;
+    margin-right: 30px;
+  }
+  &__info-title {
+    font-size: 48px;
+    line-height: 58px;
+    @extend %roboto-700;
+    color: $titleColor;
+    margin-bottom: 20px;
+  }
+  &__info-text {
+    margin-bottom: 60px;
+  }
+  &__info-item {
+    margin-top: 55px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-image: url(../../images/icons/phone-icon.svg);
+      top: 15px;
+      left: 20px;
+    }
+  }
+  &__info-item--email::after {
+    background-image: url(../../images/icons/email-icon.svg);
+    width: 18px;
+    left: 23px;
+  }
+  &__info-item--location::after {
+    background-image: url(../../images/icons/location-icon.svg);
+    width: 14px;
+    left: 23px;
+  }
+  &__info-item,
+  &__info-item a {
+    color: $titleColor;
+  }
+  &__info-phone {
+    display: block;
+  }
+  &__form {
+    width: 100%;
+    padding: 60px 40px;
+    box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+  }
+  &__form-title {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: $titleColor;
+    @extend %roboto-700;
+  }
+  &__form-box {
+    display: flex;
+    justify-content: space-between;
+    input {
+      width: 330px;
+    }
+  }
+  &__form-input {
+    display: block;
+    width: 100%;
+    height: 60px;
+    background-color: $bgCol;
+    border: none;
+    padding: 0 24px;
+    margin-bottom: 30px;
+  }
+  &__form-textarea {
+    display: block;
+    width: 100%;
+    resize: none;
+    height: 200px;
+    background-color: $bgCol;
+    border: none;
+    padding: 24px;
+    margin-bottom: 30px;
+  }
+  &__form-btn {
+    @extend %btn;
+    border: none;
+  }
+}
+li.contact__info-item {
+  padding-left: 80px;
+}
+// input.contact__form-input {
+//   padding: 0 24px;
+// }
+// textarea.contact__form-textarea {
+//   padding: 24px;
+// }

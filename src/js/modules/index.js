@@ -576,3 +576,25 @@ export function slickSliderBlogPage() {
 }
 
 ////////////////////////////////////////////////
+
+//map in contacts page
+
+// export function gMapsContacts() {
+//   const gMap = document.getElementById("map");
+
+//   if (gMap) {
+//     function initMap() {
+//       const myLatLng = { lat: 43.6222102, lng: -79.6694881 };
+
+//       let map = new google.maps.Map(document.getElementById("map"), {
+//         zoom: 15,
+//         center: myLatLng,
+//       });
+
+//       let marker = new google.maps.Marker({
+//         position: myLatLng,
+//         map: map,
+//       });
+//     }
+//   }
+// }
