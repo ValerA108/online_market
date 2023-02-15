@@ -16,6 +16,7 @@ import {
   slickSlider,
   productTabsSwitcher,
   slickSliderBlogPage,
+  // gMapsContacts,
   switchBtnFilter,
 } from "./modules";
 
@@ -47,3 +48,4 @@ switchBtnFilter();
 slickSlider();
 productTabsSwitcher();
 slickSliderBlogPage();
+// gMapsContacts();
