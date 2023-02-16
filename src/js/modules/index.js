@@ -577,24 +577,16 @@ export function slickSliderBlogPage() {
 
 ////////////////////////////////////////////////
 
-//map in contacts page
+//  burger btn active
+export function burgBtn() {
+  const menuList = document.querySelector(".menu__list");
+  const burgerBtn = document.querySelector(".menu__btn");
 
-// export function gMapsContacts() {
-//   const gMap = document.getElementById("map");
-
-//   if (gMap) {
-//     function initMap() {
-//       const myLatLng = { lat: 43.6222102, lng: -79.6694881 };
-
-//       let map = new google.maps.Map(document.getElementById("map"), {
-//         zoom: 15,
-//         center: myLatLng,
-//       });
-
-//       let marker = new google.maps.Marker({
-//         position: myLatLng,
-//         map: map,
-//       });
-//     }
-//   }
-// }
+  if (burgerBtn) {
+    burgerBtn.addEventListener("click", () => {
+      menuList.classList.toggle("menu__list--active");
+      // alert("hi");
+    });
+  }
+}
+////////////////////////////////////////////////
