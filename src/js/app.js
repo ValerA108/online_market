@@ -5,7 +5,6 @@ import "./libs/slick";
 
 import {
   isWebp,
-  isWork,
   clockTimer,
   rSlideR,
   videoPopup,
@@ -16,7 +15,7 @@ import {
   slickSlider,
   productTabsSwitcher,
   slickSliderBlogPage,
-  // gMapsContacts,
+  burgBtn,
   switchBtnFilter,
 } from "./modules";
 
@@ -48,4 +47,4 @@ switchBtnFilter();
 slickSlider();
 productTabsSwitcher();
 slickSliderBlogPage();
-// gMapsContacts();
+burgBtn();
