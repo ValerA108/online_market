@@ -136,7 +136,7 @@
 }
 
 .top-slider {
-  min-width: 100vh;
+  min-width: 100%;
   min-height: 100%;
   background-image: url(../images/top-slider-bg.png);
   background-repeat: no-repeat;
@@ -168,5 +168,124 @@
     @extend %btn;
     padding: 12px 26px;
     border: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    min-height: 600px;
+  }
+  .top-slider {
+    &__content {
+      padding-left: 0;
+      padding-top: 40px;
+    }
+    &__title {
+      font-size: 52px;
+    }
+  }
+  .slider .img {
+    background-position: 65% !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .slider {
+    min-width: 100%;
+    min-height: 500px;
+  }
+  .top-slider {
+    &__title {
+      max-width: 450px;
+      font-size: 46px;
+    }
+    &__text {
+      max-width: 450px;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .slider {
+    min-height: 400px;
+  }
+  .top-slider {
+    &__content {
+      padding-top: 35px;
+    }
+    &__title {
+      max-width: 370px;
+      font-size: 42px;
+      line-height: 46px;
+      margin-bottom: 25px;
+    }
+    &__text {
+      max-width: 370px;
+      margin-bottom: 25px;
+    }
+  }
+  .slider .img {
+    background-position: 60% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .slider {
+    min-height: 370px;
+  }
+  .top-slider {
+    &__content {
+      padding-top: 35px;
+    }
+    &__title {
+      max-width: 370px;
+      font-size: 42px;
+      line-height: 46px;
+      margin-bottom: 25px;
+    }
+    &__text {
+      max-width: 370px;
+      margin-bottom: 25px;
+    }
+  }
+  .slider .img {
+    padding: 0 0 0px 20px;
+  }
+}
+
+@media (max-width: 620px) {
+  .slider {
+    min-height: 330px;
+  }
+  .top-slider {
+    &__content {
+      padding-top: 0;
+    }
+    &__title {
+      font-size: 40px;
+      line-height: 42px;
+      margin-bottom: 10px;
+    }
+    &__text {
+      margin-bottom: 20px;
+    }
+  }
+  .slider .img {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  .slider .img:nth-of-type(1) {
+    background: none;
+  }
+  .slider .img:nth-of-type(2) {
+    background: none;
+  }
+  .slider .img:nth-of-type(3) {
+    background: none;
+  }
+  .slider .img:nth-of-type(4) {
+    background: none;
   }
 }
