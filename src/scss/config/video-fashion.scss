@@ -74,3 +74,51 @@
   max-width: 32px;
   max-height: 32px;
 }
+
+@media (max-width: 1050px) {
+  .video-fashion {
+    &__inner {
+      display: block;
+    }
+    &__popup {
+      max-width: 100%;
+      background-position: center top;
+    }
+    &__content {
+      max-width: 100%;
+      text-align: center;
+    }
+    &__title {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .video-fashion {
+    padding: 40px 0;
+    &__inner {
+      display: block;
+    }
+    &__popup {
+      height: 370px;
+    }
+    &__subtitle {
+      padding-top: 40px;
+    }
+    &__text {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .video-fashion {
+    &__popup {
+      height: 270px;
+    }
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+}
