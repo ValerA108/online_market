@@ -58,7 +58,7 @@
     line-height: 32px;
   }
   &__img {
-    min-width: 770px;
+    max-width: 770px;
     height: 450px;
     object-fit: cover;
     display: block;
@@ -170,6 +170,67 @@
       background-image: url(../../images/icons/calendar.svg);
       width: 16px;
       height: 16px;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .person,
+  .latest-post {
+    display: none;
+  }
+  .blog-page {
+    .filter-category,
+    .filter-popular {
+      display: none;
+    }
+    &__inner {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    &__content {
+      width: 100%;
+      margin-right: 0;
+    }
+    &__aside {
+      width: 100%;
+    }
+    &__img {
+      max-width: 100%;
+      width: 100%;
+    }
+    .filter__title {
+      text-align: center;
+    }
+  }
+  .filter-search {
+    width: 100%;
+    &__form {
+      width: 100%;
+    }
+    &__input {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-page {
+    &__item {
+      margin-bottom: 20px;
+    }
+    padding: 40px 0 0;
+    &__img {
+      height: 270px;
+    }
+    &__item-box {
+      padding: 20px;
+    }
+    &__slider .slick-next {
+      right: 20px;
+    }
+    &__slider .slick-prev {
+      left: 20px;
     }
   }
 }
