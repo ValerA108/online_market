@@ -44,10 +44,16 @@
 
 @media (max-width: 860px) {
   .page-404 {
-    padding: 60px 0 60px;
+    padding: 80px 0 80px;
     &__img {
       display: none;
     }
+  }
+}
+
+@media (max-width: 480px) {
+  .page-404 {
+    padding: 60px 0 60px;
     &__content {
       display: flex;
       flex-direction: column;
