@@ -162,6 +162,20 @@ li.contact__info-item {
       flex-direction: column;
       justify-content: center;
     }
+    &__info-item {
+      &::before {
+        top: 1px;
+        width: 50px;
+        height: 50px;
+      }
+      &::after {
+        top: 15px;
+        left: 16px;
+      }
+    }
+    li.contact__info-item {
+      padding-left: 60px;
+    }
   }
   #map {
     height: 270px;
