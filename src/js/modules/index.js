@@ -462,11 +462,18 @@ export function switchBtnFilter() {
       $(".shop-content__filter-btn").removeClass("active");
       $(this).addClass("active");
     });
+
     $(".button-list").on("click", function () {
       $(".product-item").addClass("list");
+      $(".shop-content__inner").addClass("shop-content__nogrid");
     });
+
     $(".button-grid").on("click", function () {
       $(".product-item").removeClass("list");
+      $(".shop-content__inner").removeClass("shop-content__nogrid");
+    });
+    $(".shop__filter-btn").on("click", function () {
+      $(".shop__filters").slideToggle();
     });
   }
 }
