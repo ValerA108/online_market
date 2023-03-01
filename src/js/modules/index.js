@@ -507,18 +507,21 @@ export function slickSlider() {
       slidesToScroll: 1,
       vertical: true,
       draggable: false,
-      // arrows: true,
-      // fade: true,
       asNavFor: ".product-slide__big",
       focusOnSelect: true,
     });
     $(".product-slide__big").slick({
-      // slidesToShow: 1,
-      // slidesToScroll: 1,
-      // arrows: false,
       fade: true,
       asNavFor: ".product-slide__thumb",
       draggable: false,
+      responsive: [
+        {
+          breakpoint: 1051,
+          settings: {
+            draggable: true,
+          },
+        },
+      ],
     });
   }
 }
