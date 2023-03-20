@@ -44,6 +44,26 @@ export function isWebp() {
 
 ////////////////////////////////////
 
+// menu active item //
+
+export function activeMenuItem() {
+  const aMenu = document.querySelectorAll(".menu__list");
+  const headerInner = document.querySelector(".header__inner");
+
+  const currentLocation = location.href;
+  const menuItem = document.querySelectorAll(".menu__list-link");
+
+  if (headerInner) {
+    for (let i = 0; i < menuItem.length; i++) {
+      if (menuItem[i].href === currentLocation) {
+        menuItem[i].className += " menu__list-link--active";
+      }
+    }
+  }
+}
+
+////////////////////////////////////
+
 // top slider //
 
 export function topSlider() {

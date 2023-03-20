@@ -5,6 +5,7 @@ import "./libs/slick";
 
 import {
   isWebp,
+  activeMenuItem,
   clockTimer,
   rSlideR,
   videoPopup,
@@ -37,6 +38,7 @@ isWebp();
 // headerFixed()
 // ====================================================================================================================================================
 
+activeMenuItem();
 topSlider();
 starRating();
 videoPopup();
